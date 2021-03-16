@@ -39,7 +39,7 @@ public class PostController {
         return "update_post";
     }
 
-    @RequestMapping(value="/deletePost/{id}")
+    @RequestMapping(value="/delete_post/{id}")
     public String deletePost(@PathVariable long id) {
         postService.deletePost(id);
         return "redirect:/";

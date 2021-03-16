@@ -11,7 +11,7 @@
     <input type="text" th:field="*{content}"/>
     <button type="submit">save</button>
 </form>
-<form action="#" th:action="@{/deletePost/{id}(id=${post.id})}" th:object="${post}" method="POST">
+<form action="#" th:action="@{/delete_post/{id}(id=${post.id})}" th:object="${post}" method="POST">
     <input type="hidden" th:field="${post}"/>
     <button type="submit">delete</button>
 </form>
