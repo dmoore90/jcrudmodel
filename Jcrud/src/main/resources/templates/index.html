@@ -12,13 +12,9 @@
 </form>
 
 <h1>To Do List</h1>
-<tr th:each="post : ${listPosts}">
-    <a th:href="@{'/update_post/' + ${post.id}}">
-    	<ul>
-    		<td th:text="${post.content}">Content</td>
-    	</ul>
-    </a>
-</tr>
+    <ul th:each="post : ${postList}">
+        <a th:href="@{'/update_post/' + ${post.id}}"><p th:text="${post.content}" /></a>
+    </ul>
 
 </body>
 </html>
