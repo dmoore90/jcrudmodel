@@ -6,13 +6,13 @@
 </head>
 <body>
 <h1>Update Post</h1>
-<form action="#" th:action="@{/}" th:object="${post}" method="POST">
-    <input type="hidden" th:field="*{id}" readonly="readonly" />
+<form th:action="@{/}" th:object="${post}" method="POST">
+    <input type="hidden" th:field="*{id}" />
     <input type="text" th:field="*{content}"/>
     <button type="submit">save</button>
 </form>
-<form action="#" th:action="@{/delete_post/{id}(id=${post.id})}" th:object="${post}" method="POST">
-    <input type="hidden" th:field="${post}"/>
+<form th:action="@{'/delete_post/' + ${post.id}}" th:object="${post}" method="POST">
+    <input type="hidden" th:field="*{id}"/>
     <button type="submit">delete</button>
 </form>
 </body>
